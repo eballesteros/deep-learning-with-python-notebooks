@@ -19,7 +19,7 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
-    	"python.defaultInterpreterPath": "/opt/conda/bin/python"
+    	"python.defaultInterpreterPath": "/bin/python3"
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
@@ -31,5 +31,9 @@
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "jovyan"
+	// "remoteUser": "nonroot", # moved this to Dockerfile
+
+	"runArgs": [
+		"--gpus=all",
+	]
 }
