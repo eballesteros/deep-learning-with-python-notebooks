@@ -45,3 +45,6 @@ RUN apt-get update \
 
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
+
+# install extra stuff
+RUN pip install kaggle
